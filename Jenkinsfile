@@ -58,7 +58,7 @@ pipeline{
                     
                     if (eksClusterExists == "NOT_FOUND") {
                         dir('eks') {
-                            sh "terraform init"
+                            sh "terraform init -migrate-state"
                             sh "terraform plan"
                         }
 
