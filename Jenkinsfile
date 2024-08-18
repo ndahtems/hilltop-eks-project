@@ -80,7 +80,7 @@ pipeline{
             steps {
                 script {
                     dir('deployment') {
-                        sh "aws eks update-kubeconfig --name hilltop-eks-cluster"
+                        sh "aws eks update-kubeconfig --name eks-hilltop"
                         sh "kubectl apply -f deploy.yaml"
                         sh "kubectl apply -f service.yaml"
                     }
