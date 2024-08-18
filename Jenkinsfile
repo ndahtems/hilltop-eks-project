@@ -36,7 +36,7 @@ pipeline{
                 }
             }
         }
-	/*
+	
         stage('Push to Docker Hub') {
             steps {
                 script {
@@ -46,7 +46,7 @@ pipeline{
                 }
             }
         }
-
+	/*
         stage("Create an EKS Cluster") {
             steps {
                 script {
