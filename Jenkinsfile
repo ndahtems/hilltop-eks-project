@@ -36,7 +36,7 @@ pipeline{
                 }
             }
         }
-
+	/*
         stage('Push to Docker Hub') {
             steps {
                 script {
@@ -75,6 +75,7 @@ pipeline{
                 }
             }
         }
+	*/
 
         stage("Deploy to EKS") {
             steps {
