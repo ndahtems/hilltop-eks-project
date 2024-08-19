@@ -15,12 +15,12 @@ pipeline{
                 		git branch: 'main', url: 'https://github.com/HILL-TOPCONSULTANCY/hilltop-eks-project.git'
             		}
         	}
-
+	/*
         stage('Build-Image') {
             steps {
                 script {
                     def imageRepoName = 'chafah/hilltop-nodejs-app'
-                    def imageTag = 'latest'
+                    def imageTag = 'new'
                     sh "docker build -t ${imageRepoName}:${imageTag} ."
                     sh 'docker images'
                 }
@@ -41,18 +41,18 @@ pipeline{
             steps {
                 script {
                     def imageRepoName = 'chafah/hilltop-nodejs-app'
-                    def imageTag = 'latest'
+                    def imageTag = 'new'
                     sh "docker push ${imageRepoName}:${imageTag}"
                 }
             }
         }
-	/*
+	
         stage("Create an EKS Cluster") {
             steps {
                 script {
                     // Check if the EKS cluster already exists
                     def eksClusterExists = sh(
-                        script: "aws eks describe-cluster --name hilltop-eks-cluster --query 'cluster.status' --output text || echo 'NOT_FOUND'",
+                        script: "aws eks describe-cluster --name eks-hilltop --query 'cluster.status' --output text || echo 'NOT_FOUND'",
                         returnStdout: true
                     ).trim()
                     
@@ -90,7 +90,6 @@ pipeline{
                 }
             }
         }
-	*/
         stage("Destroy to EKS Cluster") {
             steps {
                 script {
@@ -100,5 +99,6 @@ pipeline{
                 }
             }
         }
+	*/
     }
 }
