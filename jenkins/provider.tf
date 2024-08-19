@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "hilltop-app-bucket"
+    bucket = "hilltop-bucket"
     region = "eu-central-1"
     key    = "jenkins-server/terraform.tfstate"
   }
