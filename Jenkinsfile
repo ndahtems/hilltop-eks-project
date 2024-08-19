@@ -15,7 +15,7 @@ pipeline{
                 		git branch: 'main', url: 'https://github.com/HILL-TOPCONSULTANCY/hilltop-eks-project.git'
             		}
         	}
-	/*
+
         stage('Build-Image') {
             steps {
                 script {
@@ -26,7 +26,7 @@ pipeline{
                 }
             }
         }
-
+	/*
         stage('Docker Login') {
             steps {
                 script {
