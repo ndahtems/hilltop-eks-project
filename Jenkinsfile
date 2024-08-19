@@ -46,7 +46,7 @@ pipeline{
                 }
             }
         }
-	
+	/*
         stage("Create an EKS Cluster") {
             steps {
                 script {
@@ -75,7 +75,7 @@ pipeline{
                 }
             }
         }
-	/*
+	*/
         stage("Deploy to EKS") {
             steps {
                 script {
@@ -90,6 +90,7 @@ pipeline{
                 }
             }
         }
+	/*
         stage("Destroy to EKS Cluster") {
             steps {
                 script {
