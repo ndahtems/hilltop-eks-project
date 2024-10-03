@@ -12,7 +12,7 @@ pipeline{
 		stage('Git checkout') {
             		steps {
                 		echo 'Cloning project codebase...'
-                		git branch: 'main', url: 'https://github.com/HILL-TOPCONSULTANCY/hilltop-eks-project.git'
+                		git branch: 'main', url: 'https://github.com/ndahtems/hilltop-eks-project.git'
             		}
         	}
 	/*
