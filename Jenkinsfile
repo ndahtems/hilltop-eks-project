@@ -90,7 +90,7 @@ pipeline{
                 }
             }
         }
-	*/
+
         stage("Destroy to EKS Cluster") {
             steps {
                 script {
@@ -100,5 +100,6 @@ pipeline{
                 }
             }
         }
+	*/	
     }
 }
