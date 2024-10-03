@@ -15,7 +15,7 @@ pipeline{
                 		git branch: 'main', url: 'https://github.com/ndahtems/hilltop-eks-project.git'
             		}
         	}
-	/*
+	
         stage('Build-Image') {
             steps {
                 script {
@@ -46,7 +46,7 @@ pipeline{
                 }
             }
         }
-	
+	/*
         stage("Create an EKS Cluster") {
             steps {
                 script {
