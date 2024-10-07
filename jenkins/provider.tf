@@ -1,7 +1,7 @@
 /*terraform {
   backend "s3" {
     bucket = "hilltop-bucket"
-    region = "eu-central-1"
+    region = "eu-north-1"
     key    = "jenkins-server/terraform.tfstate"
   */
 terraform {

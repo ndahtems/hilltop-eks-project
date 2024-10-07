@@ -12,15 +12,15 @@ pipeline{
 		stage('Git checkout') {
             		steps {
                 		echo 'Cloning project codebase...'
-                		git branch: 'main', url: 'https://github.com/HILL-TOPCONSULTANCY/hilltop-eks-project.git'
+                		git branch: 'main', url: 'https://github.com/ndahtems/hilltop-eks-project.git'
             		}
         	}
-	/*
+	
         stage('Build-Image') {
             steps {
                 script {
-                    def imageRepoName = 'chafah/hilltop-nodejs-app'
-                    def imageTag = 'new'
+                    def imageRepoName = 'ndahtems/nodeapp'
+                    def imageTag = 'latest'
                     sh "docker build -t ${imageRepoName}:${imageTag} ."
                     sh 'docker images'
                 }
@@ -40,13 +40,13 @@ pipeline{
         stage('Push to Docker Hub') {
             steps {
                 script {
-                    def imageRepoName = 'chafah/hilltop-nodejs-app'
-                    def imageTag = 'new'
+                    def imageRepoName = 'ndahtems/nodeapp'
+                    def imageTag = 'latest'
                     sh "docker push ${imageRepoName}:${imageTag}"
                 }
             }
         }
-	
+	/*
         stage("Create an EKS Cluster") {
             steps {
                 script {
@@ -90,7 +90,7 @@ pipeline{
                 }
             }
         }
-	*/
+
         stage("Destroy to EKS Cluster") {
             steps {
                 script {
@@ -100,5 +100,6 @@ pipeline{
                 }
             }
         }
+	*/	
     }
 }
