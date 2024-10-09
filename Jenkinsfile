@@ -20,7 +20,7 @@ pipeline{
             steps {
                 script {
                     def imageRepoName = 'ndahtems/nodeapp'
-                    def imageTag = 'latest'
+                    def imageTag = 'new'
                     sh "docker build -t ${imageRepoName}:${imageTag} ."
                     sh 'docker images'
                 }
@@ -41,7 +41,7 @@ pipeline{
             steps {
                 script {
                     def imageRepoName = 'ndahtems/nodeapp'
-                    def imageTag = 'latest'
+                    def imageTag = 'new'
                     sh "docker push ${imageRepoName}:${imageTag}"
                 }
             }
