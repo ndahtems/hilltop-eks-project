@@ -1,5 +1,6 @@
 # local . terraform dir
-.terraflocalorm/*
+.terraformlocal/*
+**/.terraform/*
 
 # tf state files
 *.tfstate
@@ -7,3 +8,7 @@
 
 # tf varaible files, may include sensitive data
 *.tfvars
+
+#ignore CLI configuration files
+.terraformrc
+terraform.rc
