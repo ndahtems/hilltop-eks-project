@@ -7,7 +7,8 @@ resource "aws_instance" "jenkins-server" {
   availability_zone           = var.avail_zone
   associate_public_ip_address = true
   user_data                   = file("jenkins.sh")
-  tags = {
+
+    tags = {
     Name = "jenkins-server"
   }
 }
@@ -15,6 +16,6 @@ resource "aws_instance" "jenkins-server" {
 
 resource "aws_key_pair" "ssh-key" {
   key_name   = "demo-key"
-  public_key = "var.my_public_key" # "${file(var.public_key_location)}"    
+  public_key = "${file(var.public_key_location)}" # "var.my_public_key"     
 
 }

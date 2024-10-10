@@ -31,4 +31,7 @@ variable "key_name" {
 variable "public_key" {
 
 }
+variable "public_key_location" {
+  
+}
 
