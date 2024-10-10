@@ -11,3 +11,10 @@ resource "aws_instance" "jenkins-server" {
     Name = "jenkins-server"
   }
 }
+
+
+resource "aws_key_pair" "ssh-key" {
+  key_name   = "demo-key"
+  public_key = "var.my_public_key" # "${file(var.public_key_location)}"    
+
+}
